@@ -54,7 +54,7 @@
                  </td> 
              </tr>
               <tr>
-                 <td style="border-top: none;" >GDN</td> 
+                 <td style="border-top: none;" > <span id="bonus"></span></td> 
                  <td style="border-top: none;" >GDN</td> 
              </tr>
          </table>
@@ -77,17 +77,47 @@
           var eth=5;
     var num =$( "#numero" ).val(); 
     var total= num*5; 
-    $( "#calculo" ).text(total);
+    var mostrar= parseFloat(total).toFixed(2);
+   $( "#calculo" ).text(mostrar);
+var bonus=num*0.7;
+var bonustotal=parseFloat(bonus).toFixed(2);
+$( "#bonus" ).text(bonustotal);
    
 $( "#numero" ).keyup(function() {
   
  var num =$( "#numero" ).val(); 
 var total= num*5;
 var mostrar= parseFloat(total).toFixed(2);
+var bonus=num*0.7;
+var bonustotal=parseFloat(bonus).toFixed(2);
+
+
  $( "#calculo" ).text(mostrar);
+$( "#bonus" ).text(bonustotal);
+
 
 });
+$( "#numero" ).change(function() {
+  
+ var num =$( "#numero" ).val(); 
+var total= num*5;
+var bonus=num*0.7;
+var bonustotal=parseFloat(bonus).toFixed(2);
+var mostrar= parseFloat(total).toFixed(2);
+ $( "#calculo" ).text(mostrar);
+$( "#bonus" ).text(bonustotal);
+
+
 });
+
+
+
+
+
+});
+
+
+
  </script>
 
 
