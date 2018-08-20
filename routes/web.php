@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Auth::routes();
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+//coins
+Route::resource('coin' ,'CoinController');
+//coins
+
+//compras
+
+Route::get('/compras', function () {
+    return view('compras.home');
 });
+//Route::get('/addcoin', 'CoinController@index');
